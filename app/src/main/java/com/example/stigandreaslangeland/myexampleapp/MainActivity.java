@@ -30,12 +30,6 @@ public class MainActivity extends AppCompatActivity {
         sessionIntent = hasActiveSession.equals((Utils.SESSION_IS_ACTIVE_VALUE)) ?
                 new Intent(this, ActiveSession.class) :
                 new Intent(this, StartSession.class);
-        
-        if(hasActiveSession.equals(Utils.SESSION_IS_ACTIVE_VALUE)) {
-            sessionIntent = new Intent(this, ActiveSession.class);
-        } else {
-            sessionIntent = new Intent(this, StartSession.class);
-        }
 
         sessionIntent.putExtra(Utils.DATABASE_TABLE_KEY, database);
 
