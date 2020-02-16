@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         sp = Utils.getSharedPreferences(this);
 
         String hasActiveSession = sp.getString(Utils.IS_ACTIVE_KEY, "");
+
+        sp.edit().clear().commit();
+
         if(hasActiveSession.equals("ACTIVE")) {
             Toast.makeText(this, "Has active session", Toast.LENGTH_LONG).show();
             sessionIntent = new Intent(this, ActiveSession.class);
