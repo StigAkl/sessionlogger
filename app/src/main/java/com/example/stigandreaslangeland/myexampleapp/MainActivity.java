@@ -27,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         sp.edit().clear().commit();
 
-        if(hasActiveSession.equals("ACTIVE")) {
-            Toast.makeText(this, "Has active session", Toast.LENGTH_LONG).show();
+        if(hasActiveSession.equals(Utils.SESSION_IS_ACTIVE_VALUE)) {
             sessionIntent = new Intent(this, ActiveSession.class);
         } else {
             sessionIntent = new Intent(this, StartSession.class);
