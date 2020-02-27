@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
         String hasActiveSession = sp.getString(Utils.IS_ACTIVE_KEY, "");
 
-        sp.edit().clear().commit();
-
         sessionIntent = hasActiveSession.equals((Utils.SESSION_IS_ACTIVE_VALUE)) ?
                 new Intent(this, ActiveSession.class) :
                 new Intent(this, StartSession.class);

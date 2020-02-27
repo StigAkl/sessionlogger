@@ -19,6 +19,7 @@ public class Utils {
     public static final String DATABASE_TABLE_KEY = "DB_TABLE";
     public static final String PRODUCTION_DB_TABLE = "sessions";
     public static final String DEV_DB_TABLE = "sessions_dev";
+    public static final String SESSION_START_TIME = "session_start_time";
 
     public static boolean isOnEmulator() {
         return Build.FINGERPRINT.startsWith("generic")
